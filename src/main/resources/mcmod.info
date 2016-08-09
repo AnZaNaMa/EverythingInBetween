@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "everythinginbetween",
+  "name": "Everything In Between",
+  "description": "This mod contains random content that I choose to add. It's got A, Z, and everything in between.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "http://www.AnZaNaMa.com",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["AnZaNaMa"],
+  "credits": "Everyone who helped me along the way. You know who you are.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

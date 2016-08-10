@@ -14,12 +14,12 @@ public class EIBClientProxy extends EIBCommonProxy {
     @Override
     public void preInit(FMLPreInitializationEvent event){
         super.preInit(event);
+        ItemsEIB.registerRenders();
     }
 
     @Override
     public void init(FMLInitializationEvent event){
         super.init(event);
-        ItemsEIB.registerRenders();
     }
 
     @Override

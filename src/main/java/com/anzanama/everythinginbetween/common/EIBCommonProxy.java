@@ -1,6 +1,9 @@
-package com.anzanama.everythinginbetween.common;
+package com.anzanama.everythinginbetween.Common;
 
-import com.anzanama.everythinginbetween.common.item.ItemsEIB;
+import com.anzanama.everythinginbetween.Client.GUI.GUIEIB;
+import com.anzanama.everythinginbetween.Common.Handler.EIBPlayerTickHandler;
+import com.anzanama.everythinginbetween.Common.item.ItemsEIB;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,7 +20,9 @@ public class EIBCommonProxy {
 
     public void init(FMLInitializationEvent event)
     {
-
+        //Register Player Tick Handler
+        FMLCommonHandler.instance().bus().register(new EIBPlayerTickHandler());
+        GUIEIB.registerGuiHandlers();
     }
 
     public void postInit(FMLPostInitializationEvent event)

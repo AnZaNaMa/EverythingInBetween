@@ -1,11 +1,8 @@
-package com.anzanama.everythinginbetween.common.item;
+package com.anzanama.everythinginbetween.Common.item;
 
-import com.anzanama.everythinginbetween.EverythingInBetween;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -15,14 +12,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemsEIB {
 
     public static Item aether_star;
+    public static Item personal_generator;
 
     public static void addItems() {
         aether_star = new ItemAetherStar();
+        personal_generator = new ItemPersonalGenerator();
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerRenders(){
         registerRender(aether_star);
+        registerRender(personal_generator);
     }
 
     @SideOnly(Side.CLIENT)

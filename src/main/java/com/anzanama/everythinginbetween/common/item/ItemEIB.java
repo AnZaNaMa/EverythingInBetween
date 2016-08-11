@@ -1,4 +1,4 @@
-package com.anzanama.everythinginbetween.common.item;
+package com.anzanama.everythinginbetween.Common.item;
 
 import net.minecraft.item.Item;
 

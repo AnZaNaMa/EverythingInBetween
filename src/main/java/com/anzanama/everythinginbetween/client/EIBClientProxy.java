@@ -1,7 +1,7 @@
-package com.anzanama.everythinginbetween.client;
+package com.anzanama.everythinginbetween.Client;
 
-import com.anzanama.everythinginbetween.common.EIBCommonProxy;
-import com.anzanama.everythinginbetween.common.item.ItemsEIB;
+import com.anzanama.everythinginbetween.Common.EIBCommonProxy;
+import com.anzanama.everythinginbetween.Common.item.ItemsEIB;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

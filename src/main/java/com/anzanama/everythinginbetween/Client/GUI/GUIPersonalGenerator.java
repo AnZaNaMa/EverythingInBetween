@@ -4,15 +4,12 @@ import com.anzanama.everythinginbetween.Common.Container.ContainerPersonalGenera
 import com.anzanama.everythinginbetween.Common.Inventory.InventoryPersonalGenerator;
 import com.anzanama.everythinginbetween.Common.item.ItemPersonalGenerator;
 import com.anzanama.everythinginbetween.EverythingInBetween;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-import java.util.UUID;
 
 /**
  * Created by Andrew Graber on 8/11/2016.
@@ -46,7 +43,8 @@ public class GUIPersonalGenerator extends GuiContainer{
         this.fontRendererObj.drawString(I18n.format("container.inventory"), 26, this.ySize - 96 + 4, 4210752);
 
         //Draw Energy Value
-        this.fontRendererObj.drawString("" + player.getEntityData().getInteger("joules") + "J", 109, 39, 0xFF9966);
+        s = player.getEntityData().getInteger("joules") + "J";
+        this.fontRendererObj.drawString(s, 109, 39, 0xFF9966);
     }
 
     protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3){

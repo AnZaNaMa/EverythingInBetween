@@ -34,8 +34,6 @@ public class ItemPersonalGenerator extends ItemEIB {
         ItemStack fuelStack = ItemStack.loadItemStackFromNBT(stack.getTagCompound().getTagList("ItemInventory", Constants.NBT.TAG_COMPOUND).getCompoundTagAt(0));
 
         if(entityIn instanceof EntityPlayer && !worldIn.isRemote) {
-            ((EntityPlayer)entityIn).addChatMessage(new TextComponentString("Is player and Server Side."));
-            entityIn.addChatMessage(new TextComponentString("Ticks Left: " + stack.getTagCompound().getInteger("ticks")));
             if (stack.getTagCompound().getInteger("ticks") <= 0) {
                 if (fuelStack != null && fuelStack.stackSize > 0) {
                     entityIn.addChatMessage(new TextComponentString("PASSED!"));
@@ -66,7 +64,6 @@ public class ItemPersonalGenerator extends ItemEIB {
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemstack, World world, EntityPlayer player, EnumHand enumHand){
         if(!world.isRemote){
             player.openGui(EverythingInBetween.instance, GUIEIB.GUI_ITEM_INV, world, 0, 0, 0);
-            player.capabilities.
         }
         return new ActionResult(EnumActionResult.PASS, itemstack);
     }

@@ -1,0 +1,5 @@
+item.aether_star.name=Aether Star
+item.personal_generator.name=Personal Generator
+item.energy_monitor.name=Energy Monitor
+
+itemGroup.tab=Everything In Between

@@ -13,16 +13,19 @@ public class ItemsEIB {
 
     public static Item aether_star;
     public static Item personal_generator;
+    public static Item energy_monitor;
 
     public static void addItems() {
         aether_star = new ItemAetherStar();
         personal_generator = new ItemPersonalGenerator();
+        energy_monitor = new ItemEnergyMonitor();
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerRenders(){
         registerRender(aether_star);
         registerRender(personal_generator);
+        registerRender(energy_monitor);
     }
 
     @SideOnly(Side.CLIENT)

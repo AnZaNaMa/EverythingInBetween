@@ -1,5 +1,6 @@
 package com.anzanama.everythinginbetween.Common.item;
 
+import com.anzanama.everythinginbetween.Common.Block.BlocksEIB;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -15,10 +16,13 @@ public class ItemsEIB {
     public static Item personal_generator;
     public static Item energy_monitor;
 
+    public static ItemBlockVariants item_block_bubbled_stone;
+
     public static void addItems() {
         aether_star = new ItemAetherStar();
         personal_generator = new ItemPersonalGenerator();
         energy_monitor = new ItemEnergyMonitor();
+        item_block_bubbled_stone = new ItemBlockVariants(BlocksEIB.bubbled_stone);
     }
 
     @SideOnly(Side.CLIENT)

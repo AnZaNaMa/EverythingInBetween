@@ -1,6 +1,7 @@
 package com.anzanama.everythinginbetween.Common;
 
 import com.anzanama.everythinginbetween.Client.GUI.GUIEIB;
+import com.anzanama.everythinginbetween.Common.Block.BlocksEIB;
 import com.anzanama.everythinginbetween.Common.Handler.EIBPlayerTickHandler;
 import com.anzanama.everythinginbetween.Common.item.ItemsEIB;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -16,6 +17,7 @@ public class EIBCommonProxy {
     public void preInit(FMLPreInitializationEvent event)
     {
         ItemsEIB.addItems();
+        BlocksEIB.addBlocks();
     }
 
     public void init(FMLInitializationEvent event)

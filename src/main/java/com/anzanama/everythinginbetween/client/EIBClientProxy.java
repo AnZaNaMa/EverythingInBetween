@@ -1,5 +1,6 @@
 package com.anzanama.everythinginbetween.Client;
 
+import com.anzanama.everythinginbetween.Common.Block.BlocksEIB;
 import com.anzanama.everythinginbetween.Common.EIBCommonProxy;
 import com.anzanama.everythinginbetween.Common.item.ItemsEIB;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -15,6 +16,8 @@ public class EIBClientProxy extends EIBCommonProxy {
     public void preInit(FMLPreInitializationEvent event){
         super.preInit(event);
         ItemsEIB.registerRenders();
+        BlocksEIB.registerRenders();
+        BlocksEIB.registerSpecialRenders();
     }
 
     @Override

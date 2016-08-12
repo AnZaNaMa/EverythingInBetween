@@ -30,5 +30,8 @@ public class EIBPlayerTickHandler {
                 }
             }
         }
+        if(event.side == Side.CLIENT && event.phase == TickEvent.Phase.END){
+            
+        }
     }
 }

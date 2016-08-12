@@ -5,6 +5,8 @@ import com.anzanama.everythinginbetween.EverythingInBetween;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
@@ -29,7 +31,6 @@ public class ItemPersonalGenerator extends ItemEIB {
 
     @Override
     public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected){
-        /*
         ItemStack fuelStack = ItemStack.loadItemStackFromNBT(stack.getTagCompound().getTagList("ItemInventory", Constants.NBT.TAG_COMPOUND).getCompoundTagAt(0));
 
         if(entityIn instanceof EntityPlayer && !worldIn.isRemote) {
@@ -48,7 +49,12 @@ public class ItemPersonalGenerator extends ItemEIB {
                 stack.getTagCompound().setInteger("ticks", stack.getTagCompound().getInteger("ticks") - 1);
             }
         }
-        */
+        if(fuelStack != null) {
+            NBTTagCompound compound = new NBTTagCompound();
+            compound.setInteger("Slot", 0);
+            fuelStack.writeToNBT(compound);
+            stack.getTagCompound().getTagList("ItemInventory", Constants.NBT.TAG_COMPOUND).set(0, compound);
+        }
     }
 
     @Override
@@ -59,8 +65,8 @@ public class ItemPersonalGenerator extends ItemEIB {
     @Override
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemstack, World world, EntityPlayer player, EnumHand enumHand){
         if(!world.isRemote){
-            player.addChatMessage(new TextComponentString("Opening GUI..."));
             player.openGui(EverythingInBetween.instance, GUIEIB.GUI_ITEM_INV, world, 0, 0, 0);
+            player.capabilities.
         }
         return new ActionResult(EnumActionResult.PASS, itemstack);
     }

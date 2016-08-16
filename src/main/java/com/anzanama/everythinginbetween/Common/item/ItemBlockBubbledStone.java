@@ -9,13 +9,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 /**
  * Created by Andrew Graber on 8/12/2016.
  */
-public class ItemBlockVariants extends ItemBlock {
+public class ItemBlockBubbledStone extends ItemBlock {
 
-    public ItemBlockVariants(Block block){
+    public ItemBlockBubbledStone(Block block){
         super(block);
         this.setMaxDamage(0);
         this.setHasSubtypes(true);
-        GameRegistry.register(this);
+        this.setUnlocalizedName("item_block_bubbled_stone");
+        this.setRegistryName("item_block_bubbled_stone");
     }
 
     @Override

@@ -4,13 +4,94 @@
         "textures": {
             "all": "everythinginbetween:blocks/bubbled_stone"
         },
-        "model": "cube_all",
+        "model": "block/cube_all",
         "uvlock": true
     },
     "variants": {
-        "normal": [{
-
-        }],
-        
+        "color": {
+			"default": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone"
+				}
+			},
+			"black": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_black"
+				}
+			},
+			"white": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_white"
+				}
+			},
+			"blue": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_blue"
+				}
+			},
+			"green": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_green"
+				}
+			},
+			"orange": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_orange"
+				}
+			},
+			"yellow": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_yellow"
+				}
+			},
+			"teal": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_teal"
+				}
+			},
+			"lightblue": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_lightblue"
+				}
+			},
+			"lightgreen": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_lightgreen"
+				}
+			},
+			"lightorange": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_lightorange"
+				}
+			},
+			"lightyellow": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_lightyellow"
+				}
+			},
+			"lightteal": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_lightteal"
+				}
+			},
+			"lightpink": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_lightpink"
+				}
+			},
+			"lightviolet": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_lightviolet"
+				}
+			},
+			"lightred": {
+				"textures": {
+					"all": "everythinginbetween:blocks/bubbled_stone_lightred"
+				}
+			}
+        },
+		"inventory": [{
+		
+		}],
     }
 }

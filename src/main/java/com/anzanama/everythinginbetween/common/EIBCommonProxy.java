@@ -16,8 +16,8 @@ public class EIBCommonProxy {
 
     public void preInit(FMLPreInitializationEvent event)
     {
-        ItemsEIB.addItems();
         BlocksEIB.addBlocks();
+        ItemsEIB.addItems();
     }
 
     public void init(FMLInitializationEvent event)

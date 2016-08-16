@@ -1,6 +1,7 @@
 package com.anzanama.everythinginbetween.Common.Block;
 
 import com.anzanama.everythinginbetween.Common.item.ItemsEIB;
+import com.anzanama.everythinginbetween.EverythingInBetween;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -28,52 +29,52 @@ public class BlocksEIB {
     }
 
     public static void registerSpecialRenders(){
-        ModelResourceLocation r = new ModelResourceLocation("bubbled_stone_default", "inventory");
+        ModelResourceLocation r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "color=default");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.DEFAULT.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_white", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "color=white");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.WHITE.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_black", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.BLACK.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_blue", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.BLUE.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_green", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.GREEN.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_orange", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.ORANGE.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_yellow", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.YELLOW.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_teal", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.TEAL.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_lightblue", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.LIGHTBLUE.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_lightgreen", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.LIGHTGREEN.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_lightorange", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.LIGHTORANGE.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_lightyellow", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.LIGHTYELLOW.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_lightteal", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.LIGHTTEAL.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_lightpink", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.LIGHTPINK.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_lightviolet", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.LIGHTVIOLET.getID(), r);
 
-        r = new ModelResourceLocation("bubbled_stone_lightred", "inventory");
+        r = new ModelResourceLocation(EverythingInBetween.MODID + ":bubbled_stone_lightred", "inventory");
         ModelLoader.setCustomModelResourceLocation(ItemsEIB.item_block_bubbled_stone, EnumColor.LIGHTRED.getID(), r);
     }
 

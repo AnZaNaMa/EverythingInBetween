@@ -9,11 +9,12 @@ import net.minecraft.block.material.Material;
  */
 public class BlockEIB extends Block {
 
-    public BlockEIB(String unlocalizedName, Material material, int hardness){
+    public BlockEIB(String unlocalizedName, Material material, int hardness, int resistance){
         super(material);
         this.setUnlocalizedName(unlocalizedName);
         this.setRegistryName(unlocalizedName);
         this.setHardness(hardness);
+        this.setResistance(resistance);
         this.setCreativeTab(EverythingInBetween.tab);
     }
 

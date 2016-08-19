@@ -30,28 +30,30 @@ public class ItemPersonalGenerator extends ItemEIB {
     }
 
     @Override
-    public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected){
-        ItemStack fuelStack = ItemStack.loadItemStackFromNBT(stack.getTagCompound().getTagList("ItemInventory", Constants.NBT.TAG_COMPOUND).getCompoundTagAt(0));
+    public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+        if (stack.getTagCompound() != null && stack.getTagCompound().hasKey("ItemInventory", Constants.NBT.TAG_LIST)) {
+            ItemStack fuelStack = ItemStack.loadItemStackFromNBT(stack.getTagCompound().getTagList("ItemInventory", Constants.NBT.TAG_COMPOUND).getCompoundTagAt(0));
 
-        if(entityIn instanceof EntityPlayer && !worldIn.isRemote) {
-            if (stack.getTagCompound().getInteger("ticks") <= 0) {
-                if (fuelStack != null && fuelStack.stackSize > 0) {
-                    entityIn.addChatMessage(new TextComponentString("PASSED!"));
-                    int fuelValue = TileEntityFurnace.getItemBurnTime(fuelStack);
-                    fuelStack.stackSize--;
-                    stack.getTagCompound().setInteger("ticks", fuelValue);
-                    stack.getTagCompound().setInteger("maxticks", fuelValue);
+            if (entityIn instanceof EntityPlayer && !worldIn.isRemote) {
+                if (stack.getTagCompound().getInteger("ticks") <= 0) {
+                    if (fuelStack != null && fuelStack.stackSize > 0) {
+                        entityIn.addChatMessage(new TextComponentString("PASSED!"));
+                        int fuelValue = TileEntityFurnace.getItemBurnTime(fuelStack);
+                        fuelStack.stackSize--;
+                        stack.getTagCompound().setInteger("ticks", fuelValue);
+                        stack.getTagCompound().setInteger("maxticks", fuelValue);
+                    }
+                } else if (stack.getTagCompound().getInteger("ticks") > 0) {
+                    ((EntityPlayer) entityIn).getEntityData().setInteger("joules", ((EntityPlayer) entityIn).getEntityData().getInteger("joules") + 1);
+                    stack.getTagCompound().setInteger("ticks", stack.getTagCompound().getInteger("ticks") - 1);
                 }
-            } else if (stack.getTagCompound().getInteger("ticks") > 0) {
-                ((EntityPlayer)entityIn).getEntityData().setInteger("joules", ((EntityPlayer)entityIn).getEntityData().getInteger("joules") + 1);
-                stack.getTagCompound().setInteger("ticks", stack.getTagCompound().getInteger("ticks") - 1);
             }
-        }
-        if(fuelStack != null) {
-            NBTTagCompound compound = new NBTTagCompound();
-            compound.setInteger("Slot", 0);
-            fuelStack.writeToNBT(compound);
-            stack.getTagCompound().getTagList("ItemInventory", Constants.NBT.TAG_COMPOUND).set(0, compound);
+            if (fuelStack != null) {
+                NBTTagCompound compound = new NBTTagCompound();
+                compound.setInteger("Slot", 0);
+                fuelStack.writeToNBT(compound);
+                stack.getTagCompound().getTagList("ItemInventory", Constants.NBT.TAG_COMPOUND).set(0, compound);
+            }
         }
     }
 

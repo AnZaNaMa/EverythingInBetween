@@ -4,7 +4,7 @@
         "textures": {
             "all": "everythinginbetween:blocks/bubbled_stone"
         },
-        "model": "block/cube_all",
+        "model": "cube_all",
         "uvlock": true
     },
     "variants": {
@@ -92,6 +92,6 @@
         },
 		"inventory": [{
 		
-		}],
+		}]
     }
 }

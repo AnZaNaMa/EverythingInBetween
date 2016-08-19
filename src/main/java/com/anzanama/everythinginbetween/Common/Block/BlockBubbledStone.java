@@ -27,7 +27,7 @@ public class BlockBubbledStone extends BlockEIB {
     public static final PropertyEnum<EnumColor> COLOR = PropertyEnum.<EnumColor>create("color", EnumColor.class);
 
     public BlockBubbledStone(){
-        super("bubbled_stone", Material.ROCK, 10);
+        super("bubbled_stone", Material.ROCK, 50, 50);
         GameRegistry.register(this);
         this.setDefaultState(this.blockState.getBaseState().withProperty(COLOR, EnumColor.DEFAULT));
     }

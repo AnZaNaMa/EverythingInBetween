@@ -3,6 +3,7 @@ package com.anzanama.everythinginbetween.Common.item;
 import com.anzanama.everythinginbetween.Common.Block.BlocksEIB;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -18,6 +19,7 @@ public class ItemsEIB {
     public static Item energy_monitor;
 
     public static ItemBlockBubbledStone item_block_bubbled_stone;
+    public static ItemBlock item_block_player_augmentor;
 
     public static void addItems() {
         aether_star = new ItemAetherStar();
@@ -25,6 +27,10 @@ public class ItemsEIB {
         energy_monitor = new ItemEnergyMonitor();
         item_block_bubbled_stone = new ItemBlockBubbledStone(BlocksEIB.bubbled_stone);
         GameRegistry.register(item_block_bubbled_stone);
+        item_block_player_augmentor = new ItemBlock(BlocksEIB.player_augmentor);
+        item_block_player_augmentor.setUnlocalizedName("item_block_player_augmentor");
+        item_block_player_augmentor.setRegistryName("item_block_player_augmentor");
+        GameRegistry.register(item_block_player_augmentor);
     }
 
     @SideOnly(Side.CLIENT)
